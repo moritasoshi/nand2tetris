@@ -1,5 +1,5 @@
 # nand2tetris
-### 「[コンピュータシステムの理論と実践](https://www.oreilly.co.jp/books/9784873117126/)」で使用するプロジェクト
+### 『[コンピュータシステムの理論と実践](https://www.oreilly.co.jp/books/9784873117126/)』で使用するプロジェクト
 
 - [ホームページ](https://www.nand2tetris.org/software)
 - [Nand2tetris Software Suiteのセットアップ方法（MacOS）](https://drive.google.com/file/d/1QDYIvriWBS_ARntfmZ5E856OEPpE4j1F/view)
