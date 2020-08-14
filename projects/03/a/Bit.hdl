@@ -7,6 +7,9 @@
  * 1-bit register:
  * If load[t] == 1 then out[t+1] = in[t]
  *                 else out does not change (out[t+1] = out[t])
+ *
+ * load(t)=1の場合にはout(t+1)=in(t)
+ * load(t)=0の場合にはout(t+1)=out(t)
  */
 
 CHIP Bit {
@@ -15,4 +18,7 @@ CHIP Bit {
 
     PARTS:
     // Put your code here:
+    Mux(a=outB, b=in, sel=load, out=inOrOutB); // out=a(if load=0), out=b(if load=1)
+    DFF(in=inOrOutB, out=out, out=outB); // out(t)=in(t-1)
+
 }
