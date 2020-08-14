@@ -5,7 +5,6 @@
 - [Nand2tetris Software Suiteのセットアップ方法（MacOS）](https://drive.google.com/file/d/1QDYIvriWBS_ARntfmZ5E856OEPpE4j1F/view)
 
 ## 第1章
----
 ### 論理回路の作成
 - すべてのデジタル機器は回路からできている
 - この章では基本となる6つの論理回路を作成していく
