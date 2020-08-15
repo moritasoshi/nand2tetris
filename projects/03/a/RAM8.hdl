@@ -9,11 +9,28 @@
  * the in value is loaded into the memory location specified by address 
  * (the loaded value will be emitted to out from the next time step onward).
  */
-
+/**
+  CHIP Mux8Way16 {
+    IN a[16], b[16], c[16], d[16],
+    e[16], f[16], g[16], h[16],
+    sel[3];
+    OUT out[16];
+  }
+*/
 CHIP RAM8 {
     IN in[16], load, address[3];
     OUT out[16];
 
     PARTS:
     // Put your code here:
+    DMux8Way (in=load, sel=address, a=a, b=b, c=c, d=d, e=e, f=f, g=g, h=h); // loadを指定のaddressに送る
+    Register (in=in, load=a, out=r1);
+    Register (in=in, load=b, out=r2);
+    Register (in=in, load=c, out=r3);
+    Register (in=in, load=d, out=r4);
+    Register (in=in, load=e, out=r5);
+    Register (in=in, load=f, out=r6);
+    Register (in=in, load=g, out=r7);
+    Register (in=in, load=h, out=r8);
+    Mux8Way16 (a=r1, b=r2, c=r3, d=r4, e=r5, f=r6, g=r7, h=r8, sel=address, out=out);
 }
