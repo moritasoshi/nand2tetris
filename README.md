@@ -24,6 +24,7 @@
   - [4章 - 順序回路 -](#4章---順序回路--)
     - [やったこと](#やったこと-3)
     - [ポイント](#ポイント-3)
+    - [つまづいたところ](#つまづいたところ)
 
 <!-- /TOC -->
 <a id="markdown-第1章---ブール論理--" name="第1章---ブール論理--"></a>
@@ -92,3 +93,19 @@
 ### ポイント
 - アセンブリから機械語に変換するプログラムをアセンブラと呼ぶ
     - Assembly language [ ADD R3, R1] -> [Binary] 1010 0011 0001 
+
+<a id="markdown-つまづいたところ" name="つまづいたところ"></a>
+### つまづいたところ
+- mult.asmファイルの先頭で以下のようなコメントを残したままコンパイル, テスト実行するとテスト途中でエラーが発生
+  - コメントアウトを削除するとエラーが消えた
+```
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/04/Mult.asm
+
+// Multiplies R0 and R1 and stores the result in R2.
+// (R0, R1, R2 refer to RAM[0], RAM[1], and RAM[2], respectively.)
+
+// Put your code here.
+  ```
